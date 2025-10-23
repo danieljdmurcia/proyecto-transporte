@@ -22,15 +22,7 @@ FastAPI
 
 Uvicorn
 
-Puedes instalarlos con:
 
-pip install fastapi uvicorn
-
-Ejecución del proyecto
-
-Clona el repositorio o descarga el ZIP.
-
-Abre una terminal en la carpeta del proyecto.
 
 Ejecuta el servidor con:
 
