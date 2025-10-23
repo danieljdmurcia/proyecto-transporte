@@ -28,6 +28,32 @@ Ejecuta el servidor con:
 
 uvicorn main:app --reload
 
+Estructura del proyecto
+
+proyecto_transportes/
+│
+├── main.py          
+├── models.py       
+├── database.py      
+├── README.md        
+└── data/
+    ├── vehiculos.json
+    └── destinos.json
+
+Mapa de endpoints
+   Vehículos
+Método	Endpoint	Descripción	Parámetros	Ejemplo de uso
+GET	/vehiculos	Muestra la lista de todos los vehículos registrados.	Ninguno	GET /vehiculos
+POST	/vehiculos	Agrega un nuevo vehículo al sistema.	JSON con los campos:
+id, placa, marca, modelo	POST /vehiculos → { "id": 1, "placa": "ABC123", "marca": "Chevrolet", "modelo": 2020 }
+PUT	/vehiculos/{id}	Actualiza los datos de un vehículo según su ID.	id en la URL + JSON con los nuevos valores	PUT /vehiculos/1
+DELETE	/vehiculos/{id}	Elimina un vehículo existente por su ID.	id en la URL	DELETE /vehiculos/1
+ Destinos
+Método	Endpoint	Descripción	Parámetros	Ejemplo de uso
+GET	/destinos	Lista todos los destinos disponibles.	Ninguno	GET /destinos
+POST	/destinos	Crea un nuevo destino.	JSON con los campos:
+id, ciudad, distancia_km	POST /destinos → { "id": 1, "ciudad": "Medellín", "distancia_km": 420 }
+
 
 Abre el navegador en:
 
